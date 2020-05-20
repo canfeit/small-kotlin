@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: instance
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
+  main:
+    banner-mode: 'off'
+
+server:
+  max-http-header-size: 20000
+  port: 8080
+  servlet:
+    context-path: /
