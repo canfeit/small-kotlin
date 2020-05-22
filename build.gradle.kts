@@ -2,8 +2,10 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
 	id("org.springframework.boot") version "2.3.0.RELEASE"
-	id("org.jetbrains.kotlin.jvm") version "1.3.70"
-	id("org.jetbrains.kotlin.plugin.spring") version "1.3.70"
+	id("io.spring.dependency-management") version "1.0.9.RELEASE" //依赖管理
+	kotlin("jvm") version "1.3.72"
+	kotlin("plugin.spring") version "1.3.72"
+    kotlin("plugin.jpa") version "1.3.72"
 }
 
 repositories {
@@ -12,11 +14,11 @@ repositories {
 
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web:2.3.0.RELEASE")
-    compile("org.springframework.boot:spring-boot-starter-webflux:2.3.0.RELEASE")
-    compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.70")
-    compile("org.jetbrains.kotlin:kotlin-reflect:1.3.70")
-    testCompile("org.springframework.boot:spring-boot-starter-test:2.3.0.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-webflux")
+    compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    compile("org.jetbrains.kotlin:kotlin-reflect")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 
 tasks.withType<KotlinCompile> {
