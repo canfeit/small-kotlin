@@ -40,3 +40,6 @@ gradle/
 build/
 gradlew
 gradlew.bat
+
+# npm yarn
+node_modules/

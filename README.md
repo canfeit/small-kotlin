@@ -2,12 +2,12 @@ small kotlin
 
 Run!
 
-Use Maven
+```bash
 
+Maven
 mvn spring-boot:run
 
-Use Gradle
-
+Gradle
 gradle bootRun
 
 Rust环境
@@ -16,3 +16,14 @@ echo 'export PATH=~/.cargo/bin:$PATH'>>~/.bashrc
 source ~/.bashrc
 cd hello-rust
 cargo run
+
+Deno环境
+curl -fsSL https://deno.land/x/install/install.sh | sh
+或
+cargo install deno
+Run!
+cd hello-deno
+yarn
+yarn eslint main.ts --fix&&deno run -A main.ts
+
+```
